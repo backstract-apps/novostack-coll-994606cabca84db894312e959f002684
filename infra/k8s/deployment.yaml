@@ -1,0 +1,22 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: novostack-coll-994606cabca84db894312e959f002684-depl
+  labels:
+    app: novostack-coll-994606cabca84db894312e959f002684
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: novostack-coll-994606cabca84db894312e959f002684
+  template:
+    metadata:
+      labels:
+        app: novostack-coll-994606cabca84db894312e959f002684
+    spec:
+      containers:
+        - name: novostack-coll-994606cabca84db894312e959f002684
+          image: 216084506783.dkr.ecr.ap-south-1.amazonaws.com/backstract_apps:novostack-coll-994606cabca84db894312e959f002684
+          imagePullPolicy: Always
+          ports:
+            - containerPort: 9055
